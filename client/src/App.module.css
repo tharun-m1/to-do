@@ -70,3 +70,47 @@
   overflow-y: auto;
   padding: 20px 20px;
 }
+
+@media screen and (max-width: 1200px) {
+  .inputContainer {
+    width: 80%;
+  }
+  .todoContainer {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .inputContainer {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .inputContainer {
+    width: 90%;
+    flex-wrap: wrap;
+  }
+  .inputContainer input {
+    width: 100%;
+  }
+  .inputContainer button {
+    width: 100%;
+    padding: 15px 0px;
+  }
+  .todoContainer {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 475px) {
+  .inputContainer input {
+    font-size: 1rem;
+  }
+  .inputContainer button {
+    font-size: 1rem;
+    padding: 8px 0px;
+  }
+  .todoContainer {
+    /* border: 2px solid green; */
+    width: 90%;
+    padding: 0px;
+  }
+}

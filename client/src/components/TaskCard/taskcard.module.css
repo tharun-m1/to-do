@@ -6,7 +6,8 @@
 .container {
   /* border: 1px solid red; */
   border-radius: 8px;
-  width: 60%;
+  width: 70%;
+  min-width: 320px;
   margin: auto;
   padding: 15px 18px;
   display: flex;
@@ -39,4 +40,35 @@
   color: white;
   border: none;
   cursor: pointer;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .container {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 475px) {
+  .container {
+    padding: 0px;
+    padding: 8px 10px;
+    /* padding-left: 10px; */
+    width: 50%;
+  }
+  .left {
+    font-size: 1rem;
+  }
+  .right button {
+    font-size: 1rem;
+    padding: 0px;
+    padding: 5px;
+  }
 }
