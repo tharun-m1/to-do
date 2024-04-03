@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: rgb(37, 34, 34);
+}
+.app {
+  height: 100dvh;
+  min-width: 320px;
+  background-color: rgb(37, 34, 34);
+}
+
+.inputContainer {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  top: 100px;
+  padding: 15px 0px;
+  display: flex;
+  gap: 30px;
+}
+.inputContainer input {
+  /* border: 2px solid red; */
+  background-color: white;
+  flex-grow: 1;
+  font-size: 1.5rem;
+  padding: 10px 15px;
+  outline-offset: 5px;
+  outline-color: red;
+}
+.inputContainer input:focus {
+  outline: none;
+}
+.inputContainer button {
+  background-color: rgb(211, 70, 4);
+  font-size: 1.5rem;
+  padding: 2px 20px;
+  color: white;
+  border: none;
+  outline-width: 2px;
+  outline-style: solid;
+  outline-offset: 2.5px;
+  outline-color: rgb(211, 70, 4);
+  cursor: pointer;
+}
