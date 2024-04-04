@@ -6,21 +6,23 @@ import { addTask } from "./redux/todoList";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 function App() {
-  const [task, setTask] = useState("");
-  const allTasks = useSelector((state) => state.todoList.value);
-  const dispatch = useDispatch();
+  const [task, setTask] = useState(""); // input from text feild is stored here.
+  const allTasks = useSelector((state) => state.todoList.value); // all the tasks we added are stored here.
+  const dispatch = useDispatch(); // hook to dispatch actions to redux store.
 
+  // This function is to add task to To-Do
   const handleAddTask = () => {
     if (task.length === 0) {
+      // checking if user trying to submit empty feild
       return toast.error("Task name cannot be empty.");
     }
     const payload = {
       task,
       status: false,
     };
-    dispatch(addTask(payload));
+    dispatch(addTask(payload)); // dispatching action to redux store with task and its status as payload.
     toast.success(`Your task:"${task}" \n - Added Succesfully`);
-    setTask("");
+    setTask(""); // Clearing input feild when task is created.
   };
 
   return (
@@ -31,6 +33,7 @@ function App() {
           <input
             onKeyDown={(e) => {
               if (e.keyCode === 13) {
+                // chekcking if user pressed enter to submit.
                 handleAddTask();
               }
             }}
